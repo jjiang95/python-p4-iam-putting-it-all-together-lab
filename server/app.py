@@ -48,7 +48,7 @@ class Login(Resource):
 
 class Logout(Resource):
     def delete(self):
-        if session.get('user_id') != None:
+        if session.get('user_id'):
             session['user_id'] = None
             return {}, 204
         else:

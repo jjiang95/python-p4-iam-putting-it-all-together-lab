@@ -36,7 +36,6 @@ class Recipe(db.Model, SerializerMixin):
     __table_args__ = (
         db.CheckConstraint('length(instructions) >= 50'),
     )
-    serialize_rules = ()
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String, nullable=False)
     instructions = db.Column(db.String, nullable=False)
